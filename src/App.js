@@ -16,16 +16,17 @@ function App() {
   //For a board of size 5 X 5 (n % 2 === 1) only a board with an even number of inversions can be solved.
 
   const isSolvable = (board) => {
+    console.log(board)
     let inversions = 0
-    for (let i = 0; i < 24; i++) {
-      for (let j = 1; j < 25; j++) {
-        if (board[i].number !== 'blank' && board[j].number!== 'blank' && board[i].number > board[j].number) {
+    for (let i = 0; i < 23; i++) {
+      for (let j = 1; j < 24; j++) {
+        if (board[i].number > board[j].number) {
           inversions++
-          console.log(inversions)
         }
       }
     }
-    return inversions % 2 === 0
+    console.log(inversions)
+    return (inversions % 2) === 0
   }
 
   const generateBoard = () => {
