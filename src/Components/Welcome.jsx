@@ -2,8 +2,8 @@
 const Welcome = () => {
     return (
         <div>
-            <h2>Number Tiles!</h2>
-            <h4>Click the tiles to move them and order them from 1 - 24</h4>
+            <h4>Number Tiles!</h4>
+            <h5>Click the tiles to move them and order them from 1 - 24</h5>
         </div>
     )
 }
