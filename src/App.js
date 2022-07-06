@@ -166,6 +166,9 @@ function App() {
     
     return (
       <div className="App">
+        <header className='header'>
+
+        </header>
       <section className="main">
         <div className={gameState}>
           {gameState === 'welcome' ?
@@ -176,8 +179,16 @@ function App() {
         </div>
           <button onClick={() => {
             generateBoard();
-          }}>Play/Reset</button>
+          }}>
+            {gameState === 'welcome' ?
+            'Play' :
+            gameState === 'unsolved' ?
+            'Reset' :
+            'Play Again'}</button>
       </section>
+      <footer className="footer">
+        <p>skyLab Industries</p>
+      </footer>
     </div>
   )
 }

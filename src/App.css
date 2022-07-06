@@ -1,14 +1,28 @@
 .main {
   display: grid;
   justify-content: center;
-  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  background-color:rgb(142, 137, 122);
+  grid-template-rows: auto 3fr 1fr 3em;
   /* margin: 200px 10px; */
 }
 
+.header {
+  grid-row: 1;
+  background-color: rgb(41, 36, 36);
+  height: 3em;
+}
+
 button {
-  margin: 60px;
+  grid-row: 3;
+  justify-self: center;
+  margin-top: 60px;
   height: 50px;
-  grid-row: 2 / 3
+  width: 75px;
+  grid-row: 2 / 3;
+  background-color: rgb(41, 36, 36);
+  border: whitesmoke;
+  color: whitesmoke;
 }
 
 @keyframes appear {
@@ -25,19 +39,21 @@ button {
   height: 250px;
   width: 250px;
   margin-top: 5em;
-  background-color: aqua;
-  border: 3px solid black;
+  background-color: rgb(41, 36, 36);
+  color: antiquewhite;
+  border: 3px solid whitesmoke ;
   animation: appear 1s linear;
 }
 
 .unsolved {
   display: grid;
-  grid-template: repeat(5, 50px) / repeat(5, 50px);
+  grid-template: repeat(5, 1fr) / repeat(5, 1fr);
   grid-row: 1 / 2;
   text-align: center;
+  height: 250px;
   width: 250px;
   margin-top: 5em;
-  background-color: rgb(250, 240, 240);
+  background-color: rgb(237, 214, 184);
   border: 3px solid black;
   animation: appear 1s linear;
 }
@@ -82,4 +98,11 @@ button {
   background-color: greenyellow;
   border: 3px solid black;
   animation: winner 5s ease-in-out;
+}
+
+.footer {
+  grid-row: 4;
+  background-color: rgb(41, 36, 36);
+  color: whitesmoke;
+  height: 4em;
 }
